@@ -183,8 +183,11 @@ devise_for :users, controllers: { sessions: "users/sessions" },
                    path: "auth",
                    path_names: { sign_in: 'login', sign_out: 'logout', password: 'secret', confirmation: 'verification', unlock: 'unblock', registration: 'register', sign_up: 'cmon_let_me_in' }
 ```
-
 実行後にブラウザで_http://localhost:3000/auth/login_にアクセスしてログイン画面を確認する
+
+### ログイン画面の編集
+
+_app/views/users/sessions/new.html.erb_ にusername項目を追加する
 
 # 参照
 
