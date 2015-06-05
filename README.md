@@ -15,72 +15,22 @@ Rails認証アプリケーションサンプル
 # 構成
 + [セットアップ](#1)
 + [ユーザーストーリー](#2)
++ [開発](#3)
 
 # 詳細
 ## <a name="1">セットアップ</a>
 
-    $ docker-compose build
-    $ docker-compose up -d
-
-もしくは
-
-    $ docker pull k2works/railsauthsample_web:WIP
-    $ docker run -d -p 3000:3000 k2works/railsauthsample_web:WIP rails s -b 0.0.0.0
-
-からの
-
-http://コンテナのIPアドレス:3000/sample
-
-コンテナIPはboot2dockerを使っているなら`boot2docker ip`で確認できる。
+* [実行環境のセットアップ](https://github.com/k2works/rails-auth-sample/wiki/%E5%AE%9F%E8%A1%8C%E7%92%B0%E5%A2%83%E3%81%AE%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97)
 
 ## <a name="2">ユーザーストーリー</a>
 
-### AさんがBさんにメッセージを送る
+* [AさんがBさんにメッセージを送る](https://github.com/k2works/rails-auth-sample/wiki/A%E3%81%95%E3%82%93%E3%81%8CB%E3%81%95%E3%82%93%E3%81%AB%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E3%82%92%E9%80%81%E3%82%8B)
 
-+ Aさんがログインする
-+ AさんがBさんにメッセージ送信
-+ Bさんがログイン
-+ ダッシュボートにAさんからメッセージが表示されている
 
-### ログインする
+## <a name="3">開発</a>
 
-+ 利用ユーザとして
-+ システムにログインしたい
-+ なぜなら複数のユーザで運用するから
-
-#### 前提
-
-+ ユーザが登録済み
-
-#### 備考
-
-### ダッシュボートを表示する
-
-+ 利用ユーザとして
-+ ダッシュボートで情報を一覧表示したい
-+ なぜならば自分に関係する情報を確認したいから
-
-#### 前提
-
-+ ユーザが登録済み
-
-#### 備考
-
-### メッセージを送信する
-
-+ 利用ユーザとして
-+ 他の利用ユーザにメッセージを送信したい
-+ なぜならば他のユーザに連絡をする必要があるから
-
-#### 前提
-
-+ ユーザが登録済み
-
-#### 備考
-
-+ 他のログインユーザの送信履歴は表示されないようにする
+* [Deviseセットアップ](https://github.com/k2works/rails-auth-sample/wiki/Devise%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97)
 
 # 参照
 
-+ [k2works/rails4-auth-controll](https://github.com/k2works/rails4-auth-controll)
-+ [k2works / railscrudtabformsample_web](https://registry.hub.docker.com/u/k2works/railscrudtabformsample_web/)
+* [k2works/rails-auth-sample]((https://github.com/k2works/rails-auth-sample/wiki))
