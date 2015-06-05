@@ -119,6 +119,21 @@ $ rails generate migration AddUsernameToUsers username:string
 $ rake db:migrate
 ```
 
+### ストロングパラメータ対応
+
+_app/controllers/application_controller.rb_
+```ruby
+class ApplicationController < ActionController::Base
+  before_action :configure_permitted_parameters, if: :devise_controller?
+
+  protected
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.for(:sign_up) << :username
+  end
+end
+```
+
 # 参照
 
 + [k2works/rails4-auth-controll](https://github.com/k2works/rails4-auth-controll)
