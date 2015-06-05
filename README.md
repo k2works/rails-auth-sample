@@ -83,6 +83,25 @@ http://コンテナのIPアドレス:3000/sample
 
 ## <a name="3">開発</a>
 
+### deviseインストール
+
+```
+$ rails generate devise:install
+```
+
+### devise用モデルインストール
+
+```
+$ rails generate devise User
+```
+
+### deviseのメーラーオプション設定
+
+_config/environments/development.rb_
+```
+config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+```
+
 # 参照
 
 + [k2works/rails4-auth-controll](https://github.com/k2works/rails4-auth-controll)
