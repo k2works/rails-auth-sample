@@ -102,6 +102,18 @@ _config/environments/development.rb_
 config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 ```
 
+### マイグレーションの実行
+
+```
+$ rake db:migrate
+```
+
+### ログイン画面の確認
+
+`rails s`実行後にブラウザで
+_http://localhost:3000/users/sign_in_
+にアクセスしてログイン画面を確認する
+
 # 参照
 
 + [k2works/rails4-auth-controll](https://github.com/k2works/rails4-auth-controll)
