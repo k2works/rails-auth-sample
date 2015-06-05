@@ -145,6 +145,7 @@ $ rails generate devise:views users
 ```
 $ rails generate devise:controllers users
 ```
+
 _config/routes.rb_
 
 ```ruby
@@ -173,6 +174,17 @@ cancel_user_registration GET    /users/cancel(.:format)        devise/registrati
                          DELETE /users(.:format)               devise/registrations#destroy
 ```
 
+### deviseルーターのカスタマイズ
+
+_config/routes.rb_
+
+```ruby
+devise_for :users, controllers: { sessions: "users/sessions" },
+                   path: "auth",
+                   path_names: { sign_in: 'login', sign_out: 'logout', password: 'secret', confirmation: 'verification', unlock: 'unblock', registration: 'register', sign_up: 'cmon_let_me_in' }
+```
+
+実行後にブラウザで_http://localhost:3000/auth/login_にアクセスしてログイン画面を確認する
 
 # 参照
 
