@@ -46,3 +46,4 @@ end
 gem 'devise'
 gem 'devise-i18n'
 gem 'devise-i18n-views'
+gem 'i18n_generators'
