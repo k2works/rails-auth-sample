@@ -33,4 +33,4 @@ Rails認証アプリケーションサンプル
 
 # 参照
 
-* [k2works/rails-auth-sample]((https://github.com/k2works/rails-auth-sample/wiki))
+* [k2works/rails-auth-sample](https://github.com/k2works/rails-auth-sample/wiki)
