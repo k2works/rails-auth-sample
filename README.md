@@ -134,6 +134,12 @@ class ApplicationController < ActionController::Base
 end
 ```
 
+### deviseビューのカスタマイズ
+
+```
+$ rails generate devise:views users
+```
+
 # 参照
 
 + [k2works/rails4-auth-controll](https://github.com/k2works/rails4-auth-controll)
