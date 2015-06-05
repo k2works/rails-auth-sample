@@ -110,9 +110,14 @@ $ rake db:migrate
 
 ### ログイン画面の確認
 
-`rails s`実行後にブラウザで
-_http://localhost:3000/users/sign_in_
-にアクセスしてログイン画面を確認する
+`rails s`実行後にブラウザで_http://localhost:3000/users/sign_in_にアクセスしてログイン画面を確認する
+
+### deviseモデルのカスタマイズ
+
+```
+$ rails generate migration AddUsernameToUsers username:string
+$ rake db:migrate
+```
 
 # 参照
 
