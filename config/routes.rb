@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :belongs
   root 'dash_board#index'
   get 'dash_board/index'
 
