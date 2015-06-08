@@ -34,3 +34,4 @@ Rails認証アプリケーションサンプル
 # 参照
 
 * [k2works/rails-auth-sample](https://github.com/k2works/rails-auth-sample/wiki)
+* [Rails on DockerをElastic Beanstalkにデプロイする](http://dev.classmethod.jp/cloud/aws/deploy-rails-on-docker-to-elasticbeanstalk/)
