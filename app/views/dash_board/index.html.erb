@@ -17,6 +17,7 @@
   </tbody>
 </table>
 <h2>所属一覧</h2>
+<%= link_to '新規登録', new_belong_path %>
 <table>
   <thead>
   <tr>
@@ -33,3 +34,42 @@
   <% end %>
   </tbody>
 </table>
+
+<h2>selectメソッドサンプル</h2>
+<%= link_to 'selectメソッド', 'http://railsdoc.com/references/select', {:target => '_blank'} %>
+<h3>パターン１：form_tagを使ってリスト内容を固定値で定義</h3>
+<%= form_tag( {controller: :dash_board, action: :index }, id: :fm, class: :search) do %>
+    <%= select :belong, :id, ['1','2','3'], {include_blank: '選択してください'}, class: 'pub' %>
+<% end %>
+
+<h2>collection_selectメソッドサンプル</h2>
+<%= link_to 'collection_selectメソッド', 'http://railsdoc.com/references/collection_select', {:target => '_blank'} %>
+<h3>パターン１：form_tagを使ってリスト内容をモデルから取得したコレクション(全件)で定義</h3>
+<%= form_tag( {controller: :dash_board, action: :index }, id: :fm, class: :search) do %>
+    <%= collection_select :selected_belong, :name, Belong.all , :name, :name, {include_blank: '選択してください'}, class: 'pub' %>
+<% end %>
+
+<h3>パターン２：form_tagを使ってリスト内容をモデルから取得したコレクション(idが１のレコード)で定義</h3>
+<%= form_tag( {controller: :dash_board, action: :index }, id: :fm, class: :search) do %>
+    <%= collection_select :selected_belong, :name, Belong.where('id =?', 1) , :name, :name, {include_blank: '選択してください'}, class: 'pub' %>
+<% end %>
+
+<h3>パターン３：form_forを使ってリスト内容をモデルから取得したコレクション(全件)で定義</h3>
+<%= form_for(@belong) do |f| %>
+    <%= f.collection_select :name, @belongs, :name, :name , {include_blank: '選択してください'}, class: 'pub'%>
+<% end %>
+
+<h3>パターン４：form_forを使ってリスト内容をモデルから取得したコレクション(全件)で定義</h3>
+<%= form_for(@belong) do |f| %>
+    <%= f.collection_select :name, Belong.all, :name, :name , {include_blank: '選択してください'}, class: 'pub'%>
+<% end %>
+
+<h3>パターン５：form_forを使ってリスト内容をモデルから取得したコレクション(idが１のレコード)で定義</h3>
+<%= form_for(@belong) do |f| %>
+    <%= f.collection_select :name, @selected_belong, :name, :name , {include_blank: '選択してください'}, class: 'pub'%>
+<% end %>
+
+<h3>パターン６：form_forを使ってリスト内容をモデルから取得したコレクション(idが１のレコード)で定義</h3>
+<%= form_for(@belong) do |f| %>
+    <%= f.collection_select :name, Belong.where('id =?', 1), :name, :name , {include_blank: '選択してください'}, class: 'pub'%>
+<% end %>
