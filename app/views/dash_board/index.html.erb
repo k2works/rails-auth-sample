@@ -73,3 +73,6 @@
 <%= form_for(@belong) do |f| %>
     <%= f.collection_select :name, Belong.where('id =?', 1), :name, :name , {include_blank: '選択してください'}, class: 'pub'%>
 <% end %>
+
+<br />
+<%= link_to 'ソースコード', 'https://github.com/k2works/rails-auth-sample/tree/rails-auth-sample-5', {:target => '_blank'} %>
