@@ -9,6 +9,7 @@
     <th>username</th>
     <th>belong_id</th>
     <th>belong_name</th>
+    <th>belong_name_find</th>
   </tr>
   </thead>
   <tbody>
@@ -17,7 +18,8 @@
         <td><%= user.id %></td>
         <td><%= user.username %></td>
         <td><%= user.belong_id %></td>
-        <td><%= user.belong %></td>
+        <td><%= user.belong_name %></td>
+        <td><%= Belong.find(user.belong_id).name %></td>
         <td><%= link_to 'Show', edit_user_registration_path(user) %></td>
         <td><%= link_to 'Edit', edit_user_registration_path(user) %></td>
         <td><%= link_to 'Destroy', edit_user_registration_path(user), method: :delete, data: { confirm: 'Are you sure?' } %></td>
