@@ -7,7 +7,8 @@ class DashBoardController < ApplicationController
       @belong = Belong.new
     end
 
-    @selected_belong = Belong.where('id =?',1)
+    select_id = 1
+    @selected_belong = Belong.where('id =?',select_id)
 
     @users.each do |user|
       belong = Belong.find(user.belong_id)
